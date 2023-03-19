@@ -10,19 +10,28 @@ namespace L8
     {
         static void Main(string[] args)
         {
-            int[] intArray = new int[5];
-            string[] strArray = new string[3];
-            decimal[] decArray = new decimal[4];
-            MyArray<int> IntMyArray = new MyArray<int>(intArray);
-            MyArray<string> StrMyArray = new MyArray<string>(strArray);
-            MyArray<decimal> DecMyArray = new MyArray<decimal>(decArray);
+            //Лаба №8
+
+            MyArray<int> IntMyArray = new MyArray<int>(5);
+            MyArray<string> StrMyArray = new MyArray<string>(3);
+            MyArray<decimal> DecMyArray = new MyArray<decimal>(4);
 
             IntMyArray.AddElement(4, 1);
-            Console.WriteLine(IntMyArray.array[1]);
             Console.WriteLine(IntMyArray.GetElement(1));
             IntMyArray.RemoveElement(1);
             Console.WriteLine(IntMyArray.GetElement(1));
-            Console.WriteLine(IntMyArray.GetLength());           
+            Console.WriteLine(IntMyArray.GetLength());
+
+            //Лаба №9
+            LogDB logDB = new LogDB(5);
+            PassDB passDB = new PassDB(5);  
+
+            Console.WriteLine("\nВведите логин:");
+            logDB.AddElement(Console.ReadLine(), 0);
+            Console.WriteLine("\nВведите пароль:");
+            logDB.AddElement(Console.ReadLine(), 0);
+
+            Console.ReadKey();
         }
     }
 }

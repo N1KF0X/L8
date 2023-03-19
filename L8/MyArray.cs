@@ -11,9 +11,9 @@ namespace L8
     {
         T[] array;
 
-        public MyArray(T[] array)
+        public MyArray(int length)
         {
-            this.array = array; 
+            this.array = new T[length]; 
         }
 
         public void AddElement(T item, int index)
