@@ -9,7 +9,7 @@ namespace L8
 {
     internal class MyArray <T>
     {
-        public T[] array;
+        T[] array;
 
         public MyArray(T[] array)
         {
